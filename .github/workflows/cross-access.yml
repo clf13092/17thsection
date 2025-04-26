@@ -10,6 +10,7 @@ jobs:
         uses: actions/create-github-app-token@v1
         with:
           app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.PRIVATE_KEY }}
           repositories: ${{ env.TARGET_REPO }}
       - uses: actions/checkout@v4                  # 別リポジトリのチェックアウト
         with:
